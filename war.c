@@ -53,11 +53,28 @@ int main() {
     // - Aloca a memória para o mapa do mundo e verifica se a alocação foi bem-sucedida.
     // - Preenche os territórios com seus dados iniciais (tropas, donos, etc.).
     // - Define a cor do jogador e sorteia sua missão secreta.
-
-    struct Territorio mapa[MAX_TERRITORIOS];
+  
     int totalTerritorios;
-    totalTerritorios = 0;
+    struct Territorio mapa[MAX_TERRITORIOS];
+   
 
+        printf("==============================\n");
+        printf("Vamos cadastrar os 5 territorios iniciais do nosso mapa.\n");
+        printf("==============================\n");
+    
+
+        printf("--- Cadastrando Território %d ---\n");
+        printf("Digite o nome do território:\n");
+        fgets(mapa[totalTerritorios].nome, MAX_STRING, stdin);
+
+        printf("Digite a cor do território:\n");
+        fgets(mapa[totalTerritorios].cor, MAX_STRING, stdin);
+
+        printf("Digite o numero de tropas do território:\n");
+        fgets(mapa[totalTerritorios].tropas, MAX_STRING, stdin);
+        totalTerritorios ++;
+
+    };
     // 2. Laço Principal do Jogo (Game Loop):
     // - Roda em um loop 'do-while' que continua até o jogador sair (opção 0) ou vencer.
     // - A cada iteração, exibe o mapa, a missão e o menu de ações.
@@ -66,13 +83,6 @@ int main() {
     //   - Opção 2: Verifica se a condição de vitória foi alcançada e informa o jogador.
     //   - Opção 0: Encerra o jogo.
     // - Pausa a execução para que o jogador possa ler os resultados antes da próxima rodada.
-    do {
-        printf("==============================\n");
-        printf("Vamos cadastrar os 5 territorios iniciais do nosso mapa.\n");
-        printf("==============================\n");
-        printf("--- Cadastrando Território %d ---");
-        fgets(mapa[totalTerritorios].nome, MAX_STRING, stdin);
-    }
     
 
     // 3. Limpeza:
